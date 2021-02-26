@@ -55,6 +55,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         val answerOutput = findViewById<TextView>(R.id.answer_output)
+
+        textToSpeech = TextToSpeech(this, TextToSpeech.OnInitListener {  })
         textToSpeech.language = Locale.US
 
         findViewById<FloatingActionButton>(R.id.read_answer).setOnClickListener {
